@@ -1,398 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programming di RumahRafif.</title>
-    <style>
-        * {
-    text-decoration: none;
-    margin: 0px;
-    padding: 0px;
-}
-
-body {
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Open Sans',sans-serif;
-}
-
-.wrapper {
-    width: 1100px;
-    margin: auto;
-    position: relative;
-}
-
-.logo a {
-    font-size: 50px;
-    font-weight: 800;
-    float: left;
-    font-family: courier;
-    color: #364f6b;
-}
-
-.menu {
-    float: right;
-}
-
-nav {
-    width: 100%;
-    margin: auto;
-    display: flex;
-    line-height: 80px;
-    position: sticky;
-    position: -webkit-sticky; 
-    top: 0;
-    background: #FFFFFF;
-    z-index: 1;
-    border-bottom:1px solid #364f6b;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-nav ul li {
-    float: left;
-}
-
-nav ul li a {
-    color: black;
-    font-weight: bold;
-    text-align: center;
-    padding: 0px 16px 0px 16px;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-section {
-    margin: auto;
-    display: flex;
-    margin-bottom: 50px;
-}
-
-.kolom {
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.kolom .deskripsi {
-    font-size: 20px;
-    font-weight: bold;
-    font-family: 'comic sans ms';
-    color: #364f6b;
-}
-
-h2 {
-    font-family: 'comic sans ms';
-    font-weight: 800;
-    font-size: 45px;
-    margin-bottom: 20px;
-    color: #364f6b;
-    width: 100%;
-    line-height: 50px;
-}
-
-a.tbl-biru {
-    background: #3f72af;
-    border-radius: 20px;
-    margin-top: 20px;
-    padding: 15px 20px 15px 20px;
-    color: #FFFFFF;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-a.tbl-biru:hover {
-    background: #fc5185;
-    text-decoration: none;
-}
-
-a.tbl-pink {
-    background: #fc5185;
-    border-radius: 20px;
-    margin-top: 20px;
-    padding: 15px 20px 15px 20px;
-    color: #FFFFFF;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-a.tbl-pink:hover {
-    background: #3f72af;
-    text-decoration: none;
-}
-
-p {
-    margin: 10px 0px 10px 0px;
-    padding: 10px 0px 10px 0px;
-}
-
-.tengah {
-    text-align: center;
-    width: 100%;
-}
-
-.tutor-list {
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.kartu-tutor {
-    width: 20%;
-    margin: 0 auto;
-}
-
-.kartu-tutor img {
-    width: 80%;
-    border-radius: 50%;
-}
-
-.kartu-tutor p {
-    font-family: 'comic sans ms';
-    font-weight: 800;
-    font-size: 25px;
-    text-align: center;
-    color: #364f6b;
-}
-
-.partner-list {
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.kartu-partner {
-    width: 20%;
-    margin: 0 auto;
-}
-
-.kartu-partner img {
-    width: 150px;
-    border-radius: 50%;
-}
-
-#contact {
-    background: #dedede;
-    padding:50px 0px 50px 0px;
-}
-
-.footer {
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-}
-
-.footer-section {
-    width: 20%;
-    margin: 0 auto;
-}
-
-h3 {
-    font-family: 'comic sans ms';
-    font-weight: 800;
-    font-size: 30px;
-    margin-bottom: 20px;
-    color: #364f6b;
-    width: 100%;
-    line-height: 50px;
-}
-
-#copyright {
-    text-align: center;
-    width: 100%;
-    padding: 50px 0px 50px 0px;
-    margin-top: 50px;
-}
-
-@media screen and (max-width: 991.98px) {
-    .wrapper {
-        width: 90%;
-    }
-
-    .logo a {
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
-
-    nav .menu {
-        width: 100%;
-        margin: 0;
-    }
-
-    nav .menu ul {
-        text-align: center;
-        margin: auto;
-        line-height: 60px;
-    }
-
-    nav .menu ul li {
-        display: inline-block;
-        float: none;
-    }
-
-    section {
-        display: block;
-    }
-
-    section img {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
-
-    .kartu-tutor {
-        width: 50%;
-    }
-
-    .kartu-partner {
-        width: 50%;
-    }
-}
-    </style>
+  <title>Pilihan Produk</title>
+  <link rel="stylesheet" type="text/css" href="public/css/style.css">
 </head>
 <body>
-    <nav>
-        <div class="wrapper">
-            <div class="logo"><a href=''>Editen Dewe Tod.</a></div>
-            <div class="menu">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#courses">Courses</a></li>
-                    <li><a href="#tutors">Tutors</a></li>
-                    <li><a href="#partners">Partners</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="https://flappybird.io/">Game</a></li>
-                    <li><a href="" class="tbl-biru">Sign Up</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div class="wrapper">
-        <!-- untuk home -->
-        <section id="home">
-            <img src="https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg?size=626&ext=jpg&ga=GA1.2.1769275626.1605867161"/>
-            <div class="kolom">
-                <p class="deskripsi">Belajar Programming #dirumahaja</p>
-                <h2>Tetap Sehat, Tetap Semangat</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, nobis.</p>
-                <p><a href="" class="tbl-pink">Pelajari Lebih Lanjut</a></p>
-            </div>
-        </section>
 
-        <!-- untuk courses -->
-        <section id="courses">
-            <div class="kolom">
-                <p class="deskripsi">You Will Need This</p>
-                <h2>Online Courses</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed deserunt voluptatibus possimus blanditiis reiciendis. Qui, facilis! Delectus exercitationem dolores sapiente?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed deserunt voluptatibus possimus blanditiis reiciendis. Qui, facilis! Delectus exercitationem dolores sapiente?</p>
-                <p><a href="" class="tbl-biru">Pelajari Lebih Lanjut</a></p>
-            </div>
-            <img src="https://img.freepik.com/free-vector/online-learning-isometric-concept_1284-17947.jpg?size=626&ext=jpg&ga=GA1.2.1769275626.1605867161"/>
-        </section>
+  <h1>KENA GIGI UANG KEMBALI KENA TAI LAP SENDIRI</h1> 
 
-        <!-- untuk tutors -->
-        <section id="tutors">
-            <div class="tengah">
-                <div class="kolom">
-                    <p class="deskripsi">Our Top Tutors</p>
-                    <h2>Tutors</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, optio!</p>
-                </div>
+  <h2 class="catalog">Pilihan Produk</h2>
 
-                <div class="tutor-list">
-                    <div class="kartu-tutor">
-                        <img src="https://dfu1k3y1rami2.cloudfront.net/wp-content/uploads/2014/07/26195109/2020_cb.jpg"/>
-                        <p>Jason Lee Scott</p>
-                    </div>
-                    <div class="kartu-tutor">
-                        <img src="https://images.ctfassets.net/1wryd5vd9xez/4DxzhQY7WFsbtTkoYntq23/a4a04701649e92a929010a6a860b66bf/https___cdn-images-1.medium.com_max_2000_1_Y6l_FDhxOI1AhjL56dHh8g.jpeg"/>
-                        <p>John Doe</p>
-                    </div>
-                    <div class="kartu-tutor">
-                        <img src="https://images.fastcompany.net/image/upload/w_596,c_limit,q_auto:best,f_auto/fc/3021752-inline-i-1-why-square-designed-its-new-offices-to-work-like-a-city.jpg"/>
-                        <p>Michael Dell</p>
-                    </div>
-                    <div class="kartu-tutor">
-                        <img src="https://blogs-images.forbes.com/jackkelly/files/2019/06/Jack-Kelly_avatar_1559658819-400x400.jpg"/>
-                        <p>Bruce Wills</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- untuk partners -->
-        <section id="partners">
-            <div class="tengah">
-                <div class="kolom">
-                    <p class="deskripsi">Our Top Partners</p>
-                    <h2>Partners</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi magni tempore expedita sequi. Similique rerum doloremque impedit saepe atque maxime.</p>
-                </div>
-
-                <div class="partner-list">
-                    <div class="kartu-partner">
-                        <img src="https://www.designevo.com/res/templates/thumb_small/black-wheat-and-mortarboard.png"/>
-                    </div>
-                    <div class="kartu-partner">
-                        <img src="https://image.freepik.com/free-vector/campus-collage-university-education-logo-design-template_7492-63.jpg"/>
-                    </div>
-                    <div class="kartu-partner">
-                        <img src="https://image.freepik.com/free-vector/campus-collage-university-education-logo-design-template_7492-62.jpg"/>
-                    </div>
-                    <div class="kartu-partner">
-                        <img src="https://www.designevo.com/res/templates/thumb_small/encircled-branches-and-book.png"/>
-                    </div>
-                    <div class="kartu-partner">
-                        <img src="https://image.freepik.com/free-vector/campus-collage-university-education-logo-design-template_7492-64.jpg"/>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <div class="catalog">
+    <div class="image-container">
+      <img src="public/img/foto1.jpg" alt="Wanita 1" onclick="selectImage(1)">
+      <p class="image-name">Wanita 1</p>
     </div>
-
-    <div id="contact">
-        <div class="wrapper">
-            <div class="footer">
-                <div class="footer-section">
-                    <h3>Koncol</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint, culpa!</p>
-                </div>
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint, culpa!</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <p>Neverland</p>
-                    <p>Kode Pos: 57365</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Social</h3>
-                    <p><b>YouTube: </b>Zzz</p>
-                </div>
-            </div>
-        </div>
+    <div class="image-container">
+      <img src="public/img/foto2.jpg" alt="Wanita 2" onclick="selectImage(2)">
+      <p class="image-name">Wanita 2</p>
     </div>
-
-    <div id="copyright">
-        <div class="wrapper">
-            &copy; 2020. <b>Kntd</b> All Rights Reserved.
-        </div>
+    <div class="image-container">
+      <img src="public/img/foto3.jpg" alt="Wanita 3" onclick="selectImage(3)">
+      <p class="image-name">Wanita 3</p>
     </div>
-    
-</body>
+    <!-- Tambahkan elemen .image-container dan .image-name sesuai dengan jumlah foto yang diinginkan -->
+  </div>
+  
+
+  <form>
+    <label for="size">Ukuran:</label>
+    <select id="size" name="size">
+      <option value="S">sexy</option>
+      <option value="M">semok</option>
+      <option value="L">montok</option>
+    </select>
+    <br>
+
+    <label for="duration">Durasi:</label>
+    <select id="duration" name="duration">
+      <option value="1">1 jam</option>
+      <option value="2">2 jam</option>
+      <option value="fullnight">Full Night</option>
+    </select>
+    <br>
+
+    <label for="specification">Spesifikasi:</label>
+    <select id="specification" name="specification">
+      <option value="original">Original</option>
+      <option value="mulus">Mulus</option>
+      <option value="turun-mesin">Turun Mesin</option>
+    </select>
+    <br>
+
+    <label for="skill">Skill:</label>
+    <select id="skill" name="skill">
+      <option value="santai">Main Santai</option>
+      <option value="skill-1">Skill 1</option>
+      <option value="skill-2">Skill 2</option>
+      <option value="ulti">Ultimatew</option>
+      <option value="langsung-ulti">Langsung Ultimate</option>
+    </select>
+    <br>
+
+    <input type="submit" value="Pesan">
+  </form>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+
+  <div class="bordered-text">
+    <div class="marque">
+      <span class="moving-text mopteks2"> NANTIKAN DISKON SETIAP HARI SABTU DAN MINGGU HANYA DI KADAL MART++ &nbsp;&nbsp;&nbsp;&nbsp;<br>#ANDA PUAS KAMI LEMAS</span>
+      <span class="moving-text">&nbsp;&nbsp;&nbsp;&nbsp;NANTIKAN DISKON SETIAP HARI SABTU DAN MINGGU HANYA DI KADAL MART++<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#ANDA PUAS KAMI LEMAS</span>
+    </div>
+  </div>
+
+  
+  <script src="public/js/script.js"></script>
+<div style="text-align:right;position:fixed;z-index:9999999;bottom:0;width:auto;right:1%;cursor:pointer;line-height:0;display:block!important"><a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&utm_campaign=000_logo&utm_medium=website&utm_content=footer_img"><img src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png" alt="www.000webhost.com"></a></div><script>function getCookie(t){for(var e=t+"=",n=decodeURIComponent(document.cookie).split(";"),o=0;o<n.length;o++){for(var i=n[o];" "==i.charAt(0);)i=i.substring(1);if(0==i.indexOf(e))return i.substring(e.length,i.length)}return""}getCookie("hostinger")&&(document.cookie="hostinger=;expires=Thu, 01 Jan 1970 00:00:01 GMT;",location.reload());var wordpressAdminBody=document.getElementsByClassName("wp-admin")[0],notification=document.getElementsByClassName("notice notice-success is-dismissible"),hostingerLogo=document.getElementsByClassName("hlogo"),mainContent=document.getElementsByClassName("notice_content")[0];if(null!=wordpressAdminBody&&0<notification.length&&null!=mainContent){var googleFont=document.createElement("link");googleFontHref=document.createAttribute("href"),googleFontRel=document.createAttribute("rel"),googleFontHref.value="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700",googleFontRel.value="stylesheet",googleFont.setAttributeNode(googleFontHref),googleFont.setAttributeNode(googleFontRel);var css="@media only screen and (max-width: 576px) {#main_content {max-width: 320px !important;} #main_content h1 {font-size: 30px !important;} #main_content h2 {font-size: 40px !important; margin: 20px 0 !important;} #main_content p {font-size: 14px !important;} #main_content .content-wrapper {text-align: center !important;}} @media only screen and (max-width: 781px) {#main_content {margin: auto; justify-content: center; max-width: 445px;}} @media only screen and (max-width: 1325px) {.web-hosting-90-off-image-wrapper {position: absolute; max-width: 95% !important;} .notice_content {justify-content: center;} .web-hosting-90-off-image {opacity: 1;}} @media only screen and (min-width: 769px) {.notice_content {justify-content: space-between;} #main_content {margin-left: 5%; max-width: 445px;} .web-hosting-90-off-image-wrapper {position: absolute; display: flex; justify-content: center; width: 50%; margin-left: 45%;}} .web-hosting-90-off-image {max-width: 90%;} .content-wrapper {min-height: 454px; display: flex; flex-direction: column; justify-content: center; z-index: 5} .notice_content {display: flex; align-items: center;} * {-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;} .upgrade_button_red_sale{box-shadow: 0 2px 4px 0 rgba(255, 69, 70, 0.2); width: 264px; border: 0; border-radius: 3px; background-color: #FF5C62 !important; padding: 15px 55px !important; font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 600; color: #ffffff;} .upgrade_button_red_sale:hover{color: #ffffff !important; background: #d10303 !important;}",style=document.createElement("style"),sheet=window.document.styleSheets[0];style.styleSheet?style.styleSheet.cssText=css:style.appendChild(document.createTextNode(css)),document.getElementsByTagName("head")[0].appendChild(style),document.getElementsByTagName("head")[0].appendChild(googleFont);var button=document.getElementsByClassName("upgrade_button_red")[0],link=button.parentElement;link.setAttribute("href","https://www.hostinger.com/hosting-starter-offer?utm_source=000webhost&utm_medium=panel&utm_campaign=000-wp"),link.innerHTML='<button class="upgrade_button_red_sale">Claim Deal</button>',(notification=notification[0]).setAttribute("style","padding-bottom: 0; padding-top: 5px; background-color: #040713; background-size: cover; background-repeat: no-repeat; color: #ffffff; border-left-color: #040713;"),notification.className="notice notice-error is-dismissible";var mainContentHolder=document.getElementById("main_content");mainContentHolder.setAttribute("style","padding: 0;"),hostingerLogo[0].remove();var h1Tag=notification.getElementsByTagName("H1")[0];h1Tag.className="000-h1",h1Tag.innerHTML="Black Friday",h1Tag.setAttribute("style",'color: white; font-family: "Roboto", sans-serif; font-size: 48px; font-weight: 700;');var h2Tag=document.createElement("H2");h2Tag.innerHTML="Up to 90% off 4-year hosting plans + free domain, SSL & DDoS protection",h2Tag.setAttribute("style",'color: white; margin: 10px 0 15px 0; font-family: "Roboto", sans-serif; font-size: 16px; font-weight: 400; line-height: 1;'),h1Tag.parentNode.insertBefore(h2Tag,h1Tag.nextSibling);var paragraph=notification.getElementsByTagName("p")[0];paragraph.innerHTML="$<span style='font-size: 80px;'>2.49</span>/mo",paragraph.setAttribute("style",'font-family: "Roboto", sans-serif; font-size: 48px; font-weight: 700; margin: 0;');var list=notification.getElementsByTagName("UL")[0];list.remove();var org_html=mainContent.innerHTML,new_html='<div class="content-wrapper">'+mainContent.innerHTML+'</div><div class="web-hosting-90-off-image-wrapper"><img class="web-hosting-90-off-image" src="https://cdn.000webhost.com/000webhost/promotions/bf-2022-bottom-banner.png"></div>';mainContent.innerHTML=new_html;var saleImage=mainContent.getElementsByClassName("web-hosting-90-off-image")[0]}</script></body>
 </html>
